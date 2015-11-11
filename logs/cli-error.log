@@ -1,0 +1,204 @@
+2015-10-24 12:59:13 Error: [PDOException] SQLSTATE[HY000] [2002] No such file or directory
+Stack Trace:
+#0 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Driver/PDODriverTrait.php(48): PDO->__construct('mysql:host=loca...', 'root', 'root', Array)
+#1 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=loca...', Array)
+#2 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Dialect/MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(883): Cake\Database\Connection->schemaCollection()
+#8 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(848): Bake\Shell\Task\ModelTask->_getAllTables()
+#9 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(186): Bake\Shell\Task\ModelTask->listAll()
+#10 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(110): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#11 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(96): Bake\Shell\Task\ModelTask->bake('Projects')
+#12 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/BakeShell.php(250): Bake\Shell\Task\ModelTask->main('Projects')
+#13 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Collection/CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('Projects', 0)
+#14 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/BakeShell.php(253): Cake\Collection\Collection->each(Object(Closure))
+#15 [internal function]: Bake\Shell\BakeShell->all('Projects')
+#16 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/Shell.php(436): call_user_func_array(Array, Array)
+#17 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(212): Cake\Console\Shell->runCommand(Array, true, Array)
+#18 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(179): Cake\Console\ShellDispatcher->_dispatch(Array)
+#19 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(126): Cake\Console\ShellDispatcher->dispatch(Array)
+#20 /Applications/MAMP/htdocs/chronos/chronos/bin/cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#21 {main}
+
+
+2015-10-24 13:01:00 Warning: Warning (2): PDO::__construct(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known in [/Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Driver/PDODriverTrait.php, line 48]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+PDO::__construct() - [internal], line ??
+Cake\Database\Driver\Mysql::_connect() - CORE/src/Database/Driver/PDODriverTrait.php, line 48
+Cake\Database\Driver\Mysql::connect() - CORE/src/Database/Driver/Mysql.php, line 90
+Cake\Database\Schema\BaseSchema::__construct() - CORE/src/Database/Schema/BaseSchema.php, line 45
+Cake\Database\Driver\Mysql::schemaDialect() - CORE/src/Database/Dialect/MysqlDialectTrait.php, line 63
+Cake\Database\Schema\Collection::__construct() - CORE/src/Database/Schema/Collection.php, line 52
+Cake\Database\Schema\CachedCollection::__construct() - CORE/src/Database/Schema/CachedCollection.php, line 43
+Cake\Database\Connection::schemaCollection() - CORE/src/Database/Connection.php, line 315
+Bake\Shell\Task\ModelTask::_getAllTables() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 883
+Bake\Shell\Task\ModelTask::listAll() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 848
+Bake\Shell\Task\ModelTask::getAssociations() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 186
+Bake\Shell\Task\ModelTask::bake() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 110
+Bake\Shell\Task\ModelTask::main() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 96
+Bake\Shell\BakeShell::Bake\Shell\{closure}() - ROOT/vendor/cakephp/bake/src/Shell/BakeShell.php, line 250
+Cake\Collection\Collection::each() - CORE/src/Collection/CollectionTrait.php, line 51
+Bake\Shell\BakeShell::all() - ROOT/vendor/cakephp/bake/src/Shell/BakeShell.php, line 253
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 436
+Cake\Console\ShellDispatcher::_dispatch() - CORE/src/Console/ShellDispatcher.php, line 212
+Cake\Console\ShellDispatcher::dispatch() - CORE/src/Console/ShellDispatcher.php, line 179
+Cake\Console\ShellDispatcher::run() - CORE/src/Console/ShellDispatcher.php, line 126
+[main] - ROOT/bin/cake.php, line 33
+
+
+
+2015-10-24 13:01:00 Error: [PDOException] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known
+Stack Trace:
+#0 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Driver/PDODriverTrait.php(48): PDO->__construct('mysql:host=/App...', 'root', 'root', Array)
+#1 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=/App...', Array)
+#2 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Dialect/MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(883): Cake\Database\Connection->schemaCollection()
+#8 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(848): Bake\Shell\Task\ModelTask->_getAllTables()
+#9 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(186): Bake\Shell\Task\ModelTask->listAll()
+#10 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(110): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#11 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(96): Bake\Shell\Task\ModelTask->bake('Projects')
+#12 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/BakeShell.php(250): Bake\Shell\Task\ModelTask->main('Projects')
+#13 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Collection/CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('Projects', 0)
+#14 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/BakeShell.php(253): Cake\Collection\Collection->each(Object(Closure))
+#15 [internal function]: Bake\Shell\BakeShell->all('Projects')
+#16 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/Shell.php(436): call_user_func_array(Array, Array)
+#17 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(212): Cake\Console\Shell->runCommand(Array, true, Array)
+#18 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(179): Cake\Console\ShellDispatcher->_dispatch(Array)
+#19 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(126): Cake\Console\ShellDispatcher->dispatch(Array)
+#20 /Applications/MAMP/htdocs/chronos/chronos/bin/cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#21 {main}
+
+
+2015-10-24 13:01:48 Warning: Warning (2): PDO::__construct(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known in [/Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Driver/PDODriverTrait.php, line 48]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+PDO::__construct() - [internal], line ??
+Cake\Database\Driver\Mysql::_connect() - CORE/src/Database/Driver/PDODriverTrait.php, line 48
+Cake\Database\Driver\Mysql::connect() - CORE/src/Database/Driver/Mysql.php, line 90
+Cake\Database\Schema\BaseSchema::__construct() - CORE/src/Database/Schema/BaseSchema.php, line 45
+Cake\Database\Driver\Mysql::schemaDialect() - CORE/src/Database/Dialect/MysqlDialectTrait.php, line 63
+Cake\Database\Schema\Collection::__construct() - CORE/src/Database/Schema/Collection.php, line 52
+Cake\Database\Schema\CachedCollection::__construct() - CORE/src/Database/Schema/CachedCollection.php, line 43
+Cake\Database\Connection::schemaCollection() - CORE/src/Database/Connection.php, line 315
+Bake\Shell\Task\ModelTask::_getAllTables() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 883
+Bake\Shell\Task\ModelTask::listAll() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 848
+Bake\Shell\Task\ModelTask::getAssociations() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 186
+Bake\Shell\Task\ModelTask::bake() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 110
+Bake\Shell\Task\ModelTask::main() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 96
+Bake\Shell\BakeShell::Bake\Shell\{closure}() - ROOT/vendor/cakephp/bake/src/Shell/BakeShell.php, line 250
+Cake\Collection\Collection::each() - CORE/src/Collection/CollectionTrait.php, line 51
+Bake\Shell\BakeShell::all() - ROOT/vendor/cakephp/bake/src/Shell/BakeShell.php, line 253
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 436
+Cake\Console\ShellDispatcher::_dispatch() - CORE/src/Console/ShellDispatcher.php, line 212
+Cake\Console\ShellDispatcher::dispatch() - CORE/src/Console/ShellDispatcher.php, line 179
+Cake\Console\ShellDispatcher::run() - CORE/src/Console/ShellDispatcher.php, line 126
+[main] - ROOT/bin/cake.php, line 33
+
+
+
+2015-10-24 13:01:48 Error: [PDOException] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known
+Stack Trace:
+#0 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Driver/PDODriverTrait.php(48): PDO->__construct('mysql:host=/App...', 'root', 'root', Array)
+#1 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=/App...', Array)
+#2 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Dialect/MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(883): Cake\Database\Connection->schemaCollection()
+#8 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(848): Bake\Shell\Task\ModelTask->_getAllTables()
+#9 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(186): Bake\Shell\Task\ModelTask->listAll()
+#10 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(110): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#11 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(96): Bake\Shell\Task\ModelTask->bake('Projects')
+#12 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/BakeShell.php(250): Bake\Shell\Task\ModelTask->main('Projects')
+#13 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Collection/CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('Projects', 0)
+#14 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/BakeShell.php(253): Cake\Collection\Collection->each(Object(Closure))
+#15 [internal function]: Bake\Shell\BakeShell->all('Projects')
+#16 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/Shell.php(436): call_user_func_array(Array, Array)
+#17 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(212): Cake\Console\Shell->runCommand(Array, true, Array)
+#18 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(179): Cake\Console\ShellDispatcher->_dispatch(Array)
+#19 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(126): Cake\Console\ShellDispatcher->dispatch(Array)
+#20 /Applications/MAMP/htdocs/chronos/chronos/bin/cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#21 {main}
+
+
+2015-10-24 13:10:32 Error: [PDOException] SQLSTATE[HY000] [2002] No such file or directory
+Stack Trace:
+#0 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Driver/PDODriverTrait.php(48): PDO->__construct('mysql:host=loca...', 'root', 'root', Array)
+#1 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=loca...', Array)
+#2 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Dialect/MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(883): Cake\Database\Connection->schemaCollection()
+#8 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(848): Bake\Shell\Task\ModelTask->_getAllTables()
+#9 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(186): Bake\Shell\Task\ModelTask->listAll()
+#10 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(110): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#11 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(96): Bake\Shell\Task\ModelTask->bake('Projects')
+#12 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/BakeShell.php(250): Bake\Shell\Task\ModelTask->main('Projects')
+#13 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Collection/CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('Projects', 0)
+#14 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/BakeShell.php(253): Cake\Collection\Collection->each(Object(Closure))
+#15 [internal function]: Bake\Shell\BakeShell->all('Projects')
+#16 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/Shell.php(436): call_user_func_array(Array, Array)
+#17 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(212): Cake\Console\Shell->runCommand(Array, true, Array)
+#18 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(179): Cake\Console\ShellDispatcher->_dispatch(Array)
+#19 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(126): Cake\Console\ShellDispatcher->dispatch(Array)
+#20 /Applications/MAMP/htdocs/chronos/chronos/bin/cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#21 {main}
+
+
+2015-10-24 13:10:47 Error: [PDOException] SQLSTATE[HY000] [2002] No such file or directory
+Stack Trace:
+#0 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Driver/PDODriverTrait.php(48): PDO->__construct('mysql:host=loca...', 'root', 'root', Array)
+#1 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=loca...', Array)
+#2 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Dialect/MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/ORM/Table.php(422): Cake\Database\Connection->schemaCollection()
+#8 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/ORM/Table.php(499): Cake\ORM\Table->schema()
+#9 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/TemplateTask.php(284): Cake\ORM\Table->primaryKey()
+#10 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/TemplateTask.php(147): Bake\Shell\Task\TemplateTask->_loadController()
+#11 [internal function]: Bake\Shell\Task\TemplateTask->main('Projects')
+#12 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/Shell.php(447): call_user_func_array(Array, Array)
+#13 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/Shell.php(442): Cake\Console\Shell->runCommand(Array, false)
+#14 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(212): Cake\Console\Shell->runCommand(Array, true, Array)
+#15 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(179): Cake\Console\ShellDispatcher->_dispatch(Array)
+#16 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(126): Cake\Console\ShellDispatcher->dispatch(Array)
+#17 /Applications/MAMP/htdocs/chronos/chronos/bin/cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#18 {main}
+
+
+2015-10-24 13:11:18 Error: [PDOException] SQLSTATE[HY000] [2002] No such file or directory
+Stack Trace:
+#0 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Driver/PDODriverTrait.php(48): PDO->__construct('mysql:host=loca...', 'root', 'root', Array)
+#1 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=loca...', Array)
+#2 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Dialect/MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Database/Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/ORM/Table.php(422): Cake\Database\Connection->schemaCollection()
+#8 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/ORM/Table.php(499): Cake\ORM\Table->schema()
+#9 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/TemplateTask.php(284): Cake\ORM\Table->primaryKey()
+#10 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/bake/src/Shell/Task/TemplateTask.php(147): Bake\Shell\Task\TemplateTask->_loadController()
+#11 [internal function]: Bake\Shell\Task\TemplateTask->main('Projects')
+#12 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/Shell.php(447): call_user_func_array(Array, Array)
+#13 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/Shell.php(442): Cake\Console\Shell->runCommand(Array, false)
+#14 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(212): Cake\Console\Shell->runCommand(Array, true, Array)
+#15 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(179): Cake\Console\ShellDispatcher->_dispatch(Array)
+#16 /Applications/MAMP/htdocs/chronos/chronos/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(126): Cake\Console\ShellDispatcher->dispatch(Array)
+#17 /Applications/MAMP/htdocs/chronos/chronos/bin/cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#18 {main}
+
+
